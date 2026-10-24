@@ -1,38 +1,91 @@
 
-.w {
-  background-image: url("tom1.png");
+* {
+  box-sizing: border-box;
 }
 
-.a {
-  background-image: url("tom2.png");
+body {
+  text-align: center;
+  background-color: #283149;
+  margin: 0;
+  min-height: 100vh;
+  padding: 35px 15px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.s {
-  background-image: url("tom3.png");
-}
-
-.d {
-  background-image: url("tom4.png");
-}
-
-.j {
-  background-image: url("snare.png");
-}
-
-.k {
-  background-image: url("crash.png");
-}
-
-.l {
-  background-image: url("kick.png");
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+  margin: 15px 0 0;
 }
 
 .set {
-  margin: 50px auto;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 15px;
+  margin: auto 0;
+  padding: 35px 0;
+}
+
+.drum {
+  outline: none;
+  border: 12px solid #404B69;
+  border-radius: 15px;
+  width: 187px;
+  height: 187px;
+  flex: 0 1 187px;
+  font-size: 5rem;
+  font-family: "Arvo", cursive;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.w { background-image: url("tom1.png"); }
+.a { background-image: url("tom2.png"); }
+.s { background-image: url("tom3.png"); }
+.d { background-image: url("tom4.png"); }
+.j { background-image: url("snare.png"); }
+.k { background-image: url("crash.png"); }
+.l { background-image: url("kick.png"); }
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
+footer {
+  color: #DBEDF3;
+  font-family: sans-serif;
+  margin-top: auto;
+  padding: 15px 0 0;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.7rem;
+  }
+
+  .drum {
+    width: 125px;
+    height: 125px;
+    flex-basis: 125px;
+    font-size: 3.5rem;
+    border-width: 8px;
+  }
+
+  .set {
+    gap: 10px;
+  }
 }
